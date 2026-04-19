@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contactez l'équipe d'EventSphere ou proposez un événement. Nous sommes à votre écoute pour toute demande d'assistance ou de partenariat au Maroc.">
+    <title>Contact - EventSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            background: var(--dark-light);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.8rem;
+            background: var(--dark);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-sm);
+            color: white;
+            font-family: inherit;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary-text);
+            font-weight: 600;
+            outline: none;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">EventSphere</a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="events.html">Événements</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">S'inscrire</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Ouvrir le menu principal" aria-expanded="false"
+                aria-controls="main-navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" style="padding: var(--spacing-lg) 0;">
+        <div class="event-details-layout" style="align-items: stretch; gap: var(--spacing-lg);">
+            <!-- Formulaire de Contact -->
+            <div style="margin-top: 0; padding: 0;">
+                <h1
+                    style="margin-top: 0; margin-bottom: 2.5rem; line-height: 1; height: 3rem; display: flex; align-items: flex-end;">
+                    Contactez-<span class="text-primary">Nous</span></h1>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" id="firstname" placeholder="Jean">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname">Nom</label>
+                            <input type="text" id="lastname" placeholder="Dupont">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="jean.dupont@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject">
+                                <option>Question générale</option>
+                                <option>Inscription à un événement</option>
+                                <option>Devenir partenaire</option>
+                                <option>Support technique</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Votre message ici..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+
+            <!-- Informations Supplémentaires -->
+            <aside style="margin-top: 0; display: flex; flex-direction: column; height: 100%;">
+                <h2 style="margin-top: 0; margin-bottom: 2.5rem; line-height: 1; height: 3rem; display: flex; 
+                align-items: flex-end;">Où nous <span class="text-secondary"> trouver</span></h2>
+                <div
+                    style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; background: var(--dark-light); padding: var(--spacing-md); border-radius: var(--radius-md); border: 1px solid var(--glass-border); margin-bottom: 0;">
+                    <div style="display: flex; flex-direction: column; gap: 2.5rem; padding: 1rem;">
+                        <div style="display: flex; align-items: start; gap: 1.5rem;">
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Adresse</h3>
+                                <p style="color: var(--gray); margin: 0; font-size: 0.95rem;">123 Avenue 2 Mars
+                                    <br>Casablanca, Maroc
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 1.5rem;">
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Téléphone</h3>
+                                <p style="color: var(--gray); margin: 0; font-size: 0.95rem;">+212 06 12 95 89 06</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: start; gap: 1.5rem;">
+                            <div>
+                                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Email</h3>
+                                <p style="color: var(--gray); margin: 0; font-size: 0.95rem;">contact@eventsphere.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer style="padding: var(--spacing-lg) 0 2rem; border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div style="text-align: center; color: var(--gray);">
+                <p>&copy; 2026 EventSphere Platform. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

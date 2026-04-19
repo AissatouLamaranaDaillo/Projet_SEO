@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez tous les détails, prix et lieux des événements exclusifs sur EventSphere. Réservez votre place dès maintenant.">
+    <title>Détails de l'événement - EventSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">EventSphere</a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="events.html">Événements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">S'inscrire</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Ouvrir le menu principal" aria-expanded="false"
+                aria-controls="main-navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" style="padding: var(--spacing-lg) 0;">
+        <div class="event-details-layout">
+            <!-- Main Content (Grid Item 1) -->
+            <div class="event-info">
+                <img id="detail-img" src="images/event1.webp" alt="Hero Event"
+                    style="width: 100%; height: 440px; object-fit: cover; border-radius: var(--radius-lg); margin-bottom: var(--spacing-md);">
+
+                <h1 id="detail-title" style="font-size: 3rem; margin-bottom: 1rem;">Conférence Future Mobile <span
+                        class="text-primary">2026</span></h1>
+
+                <div id="detail-tags"
+                    style="display: flex; gap: 1rem; margin-bottom: var(--spacing-md); flex-wrap: wrap;">
+                    <span
+                        style="background: var(--dark-light); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--glass-border);">Tech
+                        & Innovation</span>
+                    <span
+                        style="background: var(--dark-light); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--glass-border);">Développement
+                        Web</span>
+                </div>
+
+                <div id="detail-desc" class="description"
+                    style="color: var(--gray); font-size: 1.1rem; border-top: 1px solid var(--glass-border); padding-top: var(--spacing-md);">
+                    <p style="margin-bottom: 1rem;">
+                        Rejoignez-nous pour l'événement technologique le plus attendu de l'année. La Conférence Future
+                        Mobile explore les dernières tendances en matière de design responsive, de performances web et
+                        d'intelligence artificielle appliquée au mobile.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        Au programme : des sessions de live coding, des keynotes inspirantes par des leaders de
+                        l'industrie, et des opportunités de networking avec plus de 500 passionnés.
+                    </p>
+                    <h3 style="color: var(--light); margin: 2rem 0 1rem;">Ce que vous allez apprendre :</h3>
+                    <ul
+                        style="list-style: disc; padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li>Stratégies avancées pour le Responsive Web Design en 2026.</li>
+                        <li>Utilisation de CSS Grid et Flexbox pour des layouts complexes.</li>
+                        <li>Optimisation des performances sur tous les types d'écrans.</li>
+                        <li>Intégration de l'IA dans vos flux de travail de développement.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sidebar (Grid Item 2) -->
+            <aside>
+                <div
+                    style="background: var(--dark-light); padding: var(--spacing-md); border-radius: var(--radius-md); border: 1px solid var(--glass-border); height: 440px; display: flex; flex-direction: column; justify-content: space-between;">
+
+                    <div>
+                        <h3 style="margin-bottom: 1.5rem;">Informations</h3>
+
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <div>
+                                    <p style="font-size: 0.8rem; color: var(--gray);">Date & Heure</p>
+                                    <p id="detail-date" class="font-bold">24 Mai 2026, 09:00</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <div>
+                                    <p style="font-size: 0.8rem; color: var(--gray);">Lieu</p>
+                                    <p id="detail-location" class="font-bold">Palais des Congrès, Paris</p>
+                                </div>
+                            </div>
+
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <div>
+                                    <p style="font-size: 0.8rem; color: var(--gray);">Prix</p>
+                                    <p id="detail-price" class="font-bold">45.00 €</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <a href="contact.html" class="btn btn-primary" style="width: 100%;">S'inscrire maintenant</a>
+                        <p style="text-align: center; font-size: 0.8rem; color: var(--gray); margin-top: 1rem;">Places
+                            limitées : 12 restant</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer style="padding: var(--spacing-lg) 0 2rem; border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div style="text-align: center; color: var(--gray);">
+                <p>&copy; 2026 EventSphere Platform. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=3"></script>
+</body>
+
+</html>

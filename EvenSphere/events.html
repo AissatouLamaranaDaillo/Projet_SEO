@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Parcourez notre vaste catalogue d'événements au Maroc : concerts, ateliers tech, sports, ou culture. Trouvez votre prochaine sortie sur EventSphere.">
+    <title>Découvrir - EventSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">EventSphere</a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="events.html" class="active">Événements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary">S'inscrire</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Ouvrir le menu principal" aria-expanded="false"
+                aria-controls="main-navbar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container" style="padding: var(--spacing-lg) 0;">
+        <header style="margin-bottom: var(--spacing-lg);">
+            <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Tous les <span class="text-primary">Événements</span>
+            </h1>
+            <p style="color: var(--gray);">Trouvez l'expérience parfaite parmi notre sélection organisée.</p>
+        </header>
+
+        <!-- Filtres (Flexbox) -->
+        <div class="filters">
+            <button class="filter-item"
+                style="background: var(--primary); border-color: var(--primary-text); font-weight: 600; cursor: pointer;">Tout</button>
+            <button class="filter-item" style="cursor: pointer;">Aujourd'hui</button>
+            <button class="filter-item" style="cursor: pointer;">Ce week-end</button>
+            <button class="filter-item" style="cursor: pointer;">Semaine prochaine</button>
+            <div style="flex-grow: 1;"></div>
+            <select class="filter-item"
+                style="background: var(--dark-light); color: white; padding: 0.5rem; cursor: pointer;"
+                aria-label="Filtrer par catégorie">
+                <option value="all">Toutes les catégories</option>
+                <optgroup label="Conférences">
+                    <option value="tech">Tech & Innovation</option>
+                    <option value="growth">Stratégie & Marketing</option>
+                </optgroup>
+                <optgroup label="Musique">
+                    <option value="rock">Rock Indépendant</option>
+                    <option value="jazz">Jazz & Acoustique</option>
+                </optgroup>
+                <optgroup label="Ateliers & Formations">
+                    <option value="uiux">Design & Créativité</option>
+                    <option value="laravel">Développement Backend</option>
+                </optgroup>
+                <optgroup label="Sport">
+                    <option value="crossfit">Haute Intensité</option>
+                    <option value="yoga">Bien-être & Méditation</option>
+                </optgroup>
+                <optgroup label="Arts & Culture">
+                    <option value="gnaoua">Festival Gnaoua</option>
+                    <option value="zellige">Artisanat Local</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <!-- Liste des événements (Grid) -->
+        <div class="events-grid">
+            <!-- Event 1 -->
+            <article class="card" data-category="conferences" data-subcategory="tech" data-timeframe="today">
+                <img src="images/event1.webp" alt="Conférence Tech" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">19 AVRIL 2026</span>
+                    <h3>Conférence Future Mobile</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Casablanca, Maroc • 450 MAD</p>
+                    <a href="event-details.html?id=event1" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 2 -->
+            <article class="card" data-category="musique" data-subcategory="rock" data-timeframe="weekend">
+                <img src="images/event2.webp" alt="Concert Rock" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">19 AVRIL 2026</span>
+                    <h3>Concert Indie Waves</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Rabat, Maroc • 250 MAD</p>
+                    <a href="event-details.html?id=event2" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 3 -->
+            <article class="card" data-category="ateliers" data-subcategory="uiux" data-timeframe="next-week">
+                <img src="images/event3.webp" alt="Atelier Design" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">23 AVRIL 2026</span>
+                    <h3>Workshop UI/UX Avancé</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Marrakech, Maroc • Gratuit</p>
+                    <a href="event-details.html?id=event3" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 4 -->
+            <article class="card" data-category="formations" data-subcategory="laravel" data-timeframe="next-week">
+                <img src="images/event4.webp" alt="Formation Laravel" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">25 AVRIL 2026</span>
+                    <h3>Masterclass Laravel & AI</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">En ligne • 990 MAD</p>
+                    <a href="event-details.html?id=event4" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 5 -->
+            <article class="card" data-category="musique" data-subcategory="jazz" data-timeframe="upcoming">
+                <img src="images/event5.webp" alt="Festival Jazz" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">05 JUIN 2026</span>
+                    <h3>Jazz au Clair de Lune</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Tanger, Maroc • 150 MAD</p>
+                    <a href="event-details.html?id=event5" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 6 -->
+            <article class="card" data-category="conferences" data-subcategory="growth" data-timeframe="upcoming">
+                <img src="images/event6.webp" alt="Conférence Marketing" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">10 JUIN 2026</span>
+                    <h3>Marketing Digital Summit</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Agadir, Maroc • 600 MAD</p>
+                    <a href="event-details.html?id=event6" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 7 (Sport) -->
+            <article class="card" data-category="sport" data-subcategory="crossfit" data-timeframe="upcoming">
+                <img src="images/event7.png" alt="Séance Crossfit Intense" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">14 JUIN 2026</span>
+                    <h3>Séance Crossfit Elite</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Oujda, Maroc • 200 MAD</p>
+                    <a href="event-details.html?id=event7" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 8 (Sport) -->
+            <article class="card" data-category="sport" data-subcategory="yoga" data-timeframe="upcoming">
+                <img src="images/event8.png" alt="Retraite Yoga & Méditation" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">21 JUIN 2026</span>
+                    <h3>Retraite Yoga & Pilates</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Ifrane, Maroc • 850 MAD</p>
+                    <a href="event-details.html?id=event8" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 9 (Arts - Maroc) -->
+            <article class="card" data-category="arts" data-subcategory="gnaoua" data-timeframe="upcoming">
+                <img src="images/event9.png" alt="Festival Gnaoua d'Essaouira" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">26 JUIN 2026</span>
+                    <h3>Festival Gnaoua & Musiques du Monde</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Essaouira, Maroc • 300 MAD</p>
+                    <a href="event-details.html?id=event9" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+
+            <!-- Event 10 (Arts - Maroc) -->
+            <article class="card" data-category="arts" data-subcategory="zellige" data-timeframe="upcoming">
+                <img src="images/event10.png" alt="Atelier Zellige Marocain" style="height: 180px; object-fit: cover;"
+                    loading="lazy" width="400" height="250">
+                <div class="card-content">
+                    <span style="font-size: 0.75rem; color: var(--primary-text); font-weight: 600;">02 JUILLET
+                        2026</span>
+                    <h3>Maîtrise de l'Artisanat Zellige</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem;">Fès, Maroc • 500 MAD</p>
+                    <a href="event-details.html?id=event10" class="btn btn-outline" style="margin-top: 1rem;">Voir les
+                        détails</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer style="padding: var(--spacing-lg) 0 2rem; border-top: 1px solid var(--glass-border);">
+        <div class="container">
+            <div style="text-align: center; color: var(--gray);">
+                <p>&copy; 2026 EventSphere Platform. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js?v=3"></script>
+</body>
+
+</html>
